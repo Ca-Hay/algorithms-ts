@@ -5,7 +5,7 @@ describe('Linear Search', () => {
 
     test('Simple Strings', () => {
         const myList = ['Hotel', 'Alpha', 'Kilo', 'Charlie', 'Echo',
-            'Foxtrot', 'Delta', 'Juliet', 'Lima', 'Golf', 'Bravo']
+            'Foxtrot', 'Delta', 'Juliet', 'Ligma', 'Golf', 'Bravo']
 
         // Normal data which is in the list
         const charlie = linearSearch(myList, 'Charlie')
@@ -15,7 +15,7 @@ describe('Linear Search', () => {
         const alpha = linearSearch(myList, 'Alpha')
         expect(alpha).toBe(1)
 
-        const lima = linearSearch(myList, 'Lima')
+        const lima = linearSearch(myList, 'Ligma')
         expect(lima).toBe(8)
 
         // Not found
