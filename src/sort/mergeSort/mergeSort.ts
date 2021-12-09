@@ -1,7 +1,9 @@
 import { SortAlgorithm } from "../common";
 
 const mergeSort: SortAlgorithm<any> = <T>(items: T[]): T[] => {
-    if (items.length <= 1) return items;
+    if (items.length <= 1){
+      return items;
+    } 
     let left = items.slice(0, items.length / 2);
     let right = items.slice(items.length / 2, items.length);
 

@@ -2,16 +2,28 @@ import { SortAlgorithm } from "../common";
 import swap from "../swap";
 
 const insertionSort: SortAlgorithm<any> = <T>(items: T[]): T[] => {
-    //IndexIterator
+    let outputList: any[] = items;
+    
     for (let i = 0; i < items.length; i++) {
-        let item_to_place = [i]
+        let itemMoved = outputList[i];
+        let itemPlace: number = i;
 
+        while (itemPlace > 0){
+            let lower: number = itemPlace - 1;
+            let upper: number = itemPlace;
+
+            if (outputList[lower] > itemMoved ) {
+                swap(outputList , lower , upper);
             }
-            
+            else {
+                itemPlace = upper;
+                break;
+            }
+            itemPlace -= 1;
         }
-        
-    }
-    return items;
+        outputList[itemPlace] = itemMoved;
+    } 
+    return outputList;
 }
 
 export default insertionSort;
