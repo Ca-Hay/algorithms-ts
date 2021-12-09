@@ -18,7 +18,7 @@ def merge_sort(input_list: List[StrOrInt]) -> List[StrOrInt]:
 def merge_sort_recurse(input_list: List[StrOrInt],
                        left_pointer: int,
                        right_pointer: int) -> List[StrOrInt]:
-    """"
+    """" 
     Recursive form of the merge sort that requires the left and right pointers.
     """
     # Exit condition, the list is a single item
